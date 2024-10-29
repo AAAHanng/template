@@ -8,7 +8,7 @@
     "build:pro": "vue-tsc && vite build --mode production",
     "preview": "yarn build:dev && vite preview",
     "lint": "eslint src",
-    "fix": "eslint --fix --ext .js,.ts,.vue ./src",
+    "fix": "eslint --fix ./src",
     "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
     "lint:eslint": "eslint src/**/*.{ts,vue} --cache --fix",
     "lint:style": "stylelint src/**/*.{css,scss,vue} --cache --fix",

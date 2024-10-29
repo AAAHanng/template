@@ -1,16 +1,37 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
-import pluginVue from "eslint-plugin-vue";
+// eslint.config.cjs
+const globals = require("globals");
+const pluginJs = require("@eslint/js");
+const tseslint = require("typescript-eslint");
+const pluginVue = require("eslint-plugin-vue");
 
-
-export default [
-  {files: ["**/*.{js,mjs,cjs,ts,vue}"]},
-  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
-  {languageOptions: { globals: {...globals.browser, ...globals.node} }},
+module.exports = [
+  {
+    files: ["**/*.{js,mjs,cjs,ts,vue}"],
+    ignores: [
+      "*.sh",
+      "node_modules",
+      "*.md",
+      "*.woff",
+      "*.ttf",
+      ".vscode",
+      ".idea",
+      "dist",
+      "/public",
+      "/docs",
+      ".husky",
+      ".local",
+      "/bin",
+      "/src/mock/*",
+      "stats.html"
+    ]
+  },
+  {
+    files: ["**/*.js"],
+    languageOptions: { sourceType: "commonjs" }
+  },
+  { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs["flat/essential"],
-  {files: ["**/*.vue"], languageOptions: {parserOptions: {parser: tseslint.parser}}},
-
+  { files: ["**/*.vue"], languageOptions: { parserOptions: { parser: tseslint.parser } } },
 ];
