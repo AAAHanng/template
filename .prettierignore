@@ -6,6 +6,5 @@
 **/*.svg
 **/*.sh
 
-/public/*
 stats.html
 .vscode/
