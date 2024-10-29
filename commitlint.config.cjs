@@ -7,7 +7,7 @@ const scopes = fs
   .filter(dirent => dirent.isDirectory())
   .map(dirent => dirent.name.replace(/s$/, ""));
 
-/** @type {import('cz-git').UserConfig} */
+/** @types {import('cz-git').UserConfig} */
 module.exports = {
   ignores: [commit => commit.includes("init")],
   extends: ["@commitlint/config-conventional"],
@@ -43,18 +43,18 @@ module.exports = {
   },
   prompt: {
     messages: {
-      type: "Select the type of change that you're committing:",
+      type: "Select the types of change that you're committing:",
       scope: "Denote the SCOPE of this change (optional):",
       customScope: "Denote the SCOPE of this change:",
       subject: "Write a SHORT, IMPERATIVE tense description of the change:\n",
       body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
       breaking: 'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
-      footerPrefixsSelect: "Select the ISSUES type of changeList by this change (optional):",
+      footerPrefixsSelect: "Select the ISSUES types of changeList by this change (optional):",
       customFooterPrefixs: "Input ISSUES prefix:",
       footer: "List any ISSUES by this change. E.g.: #31, #34:\n",
       confirmCommit: "Are you sure you want to proceed with the commit above?"
       // 中文版
-      // type: "选择你要提交的类型 :",
+      // types: "选择你要提交的类型 :",
       // scope: "选择一个提交范围（可选）:",
       // customScope: "请输入自定义的提交范围 :",
       // subject: "填写简短精炼的变更描述 :\n",
@@ -83,7 +83,7 @@ module.exports = {
       },
       {
         value: "style",
-        name: "style:    🎨  Changes that do not affect the meaning of the code",
+        name: "styles:    🎨  Changes that do not affect the meaning of the code",
         emoji: "🎨"
       },
       {
@@ -133,14 +133,14 @@ module.exports = {
       },
       {
         value: "type",
-        name: "type:     🔰  type definition file changes",
+        name: "types:     🔰  types definition file changes",
         emoji: "🔰"
       }
       // 中文版
       // { value: "feat", name: "特性:   🚀  新增功能", emoji: "🚀" },
       // { value: "fix", name: "修复:   🧩  修复缺陷", emoji: "🧩" },
       // { value: "docs", name: "文档:   📚  文档变更", emoji: "📚" },
-      // { value: "style", name: "格式:   🎨  代码格式（不影响功能，例如空格、分号等格式修正）", emoji: "🎨" },
+      // { value: "styles", name: "格式:   🎨  代码格式（不影响功能，例如空格、分号等格式修正）", emoji: "🎨" },
       // { value: "refactor", name: "重构:   ♻️  代码重构（不包括 bug 修复、功能新增）", emoji: "♻️" },
       // { value: "perf", name: "性能:    ⚡️  性能优化", emoji: "⚡️" },
       // { value: "test", name: "测试:   ✅  添加疏漏测试或已有测试改动", emoji: "✅" },

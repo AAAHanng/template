@@ -1,0 +1,29 @@
+$menuText: #36393d;
+$menuActiveText: #386ae8;
+$logoText: #5f81de;
+
+$menuBg: #ffffff;
+$menuHover: #e7efff;
+$menuBgBlue: #f5f7fb;
+
+$subMenuBg: #1f2d3d;
+$subMenuHover: #001528;
+
+$sideBarWidth: 240px;
+$hideSideBarWidth: 60px;
+$Shadow: 0 0 43px 1px rgba(0, 0, 0, 0.13);
+
+
+:export {
+  loginText: $logoText;
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  menuBgBlue: $menuBgBlue;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  hideSideBarWidth: $hideSideBarWidth;
+  Shadow: $Shadow
+}
