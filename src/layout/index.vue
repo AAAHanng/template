@@ -7,7 +7,6 @@
 -->
 <template>
   <el-container class="layout" style="height: 500px">
-
     <el-aside width="250px" :class="[!sidebarOpened ? 'openSidebar' : 'hide-sidebar-container']">
       <el-scrollbar>
         <LayoutAside></LayoutAside>
@@ -15,15 +14,14 @@
       </el-scrollbar>
     </el-aside>
     <el-container>
-      <el-header  height="60px">
-       <LayoutHeader></LayoutHeader>
+      <el-header height="60px">
+        <LayoutHeader></LayoutHeader>
       </el-header>
 
       <el-main class="views">
-       <LayoutMain></LayoutMain>
+        <LayoutMain></LayoutMain>
       </el-main>
     </el-container>
-
   </el-container>
 </template>
 
@@ -34,18 +32,18 @@ import LayoutMain from "@/layout/components/Main/LayoutMain.vue";
 import LayoutHeader from "@/layout/components/Header/LayoutHeader.vue";
 import { computed } from "vue";
 import { useLayoutStore } from "@/store/modules/layout.ts";
-const globalLayout =useLayoutStore()
-const sidebarOpened = computed(()=>globalLayout.sidebarOpened)
+const globalLayout = useLayoutStore();
+const sidebarOpened = computed(() => globalLayout.sidebarOpened);
 </script>
 
 <style lang="scss" scoped>
-@import '@/styles/variables.module.scss';
+@import "@/styles/variables.module.scss";
 
 .el-container {
   width: 100%;
   height: 100% !important;
 }
-.asides{
+.asides {
   overflow: hidden;
 }
 
@@ -67,7 +65,7 @@ const sidebarOpened = computed(()=>globalLayout.sidebarOpened)
 .openSidebar {
   width: $sideBarWidth;
 }
-.views{
+.views {
   overflow: hidden;
 }
 </style>

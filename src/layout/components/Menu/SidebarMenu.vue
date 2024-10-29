@@ -25,20 +25,18 @@ import { computed } from "vue";
 import SubMenu from "@/layout/components/Menu/SubMenu.vue";
 import { useLayoutStore } from "@/store/modules/layout.ts";
 
-const route = useRoute()
+const route = useRoute();
 
-const store = useLayoutStore()
+const store = useLayoutStore();
 
 // eslint-disable-next-line no-undef
-const router = useRouter()
-const routers = router.options.routes
+const router = useRouter();
+const routers = router.options.routes;
 console.log(routers);
 const activeMenu = computed(() => {
-  const { path } = route
-  return path
-})
+  const { path } = route;
+  return path;
+});
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

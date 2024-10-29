@@ -21,16 +21,16 @@
 </template>
 
 <script setup lang="ts">
-import logo from '@/assets/images/logo.png'
+import logo from "@/assets/images/logo.png";
 import { useLayoutStore } from "@/store/modules/layout.ts";
-import { computed} from "vue";
+import { computed } from "vue";
 
-const store = useLayoutStore()
-const sidebarOpened = computed(()=>store.sidebarOpened)
+const store = useLayoutStore();
+const sidebarOpened = computed(() => store.sidebarOpened);
 </script>
 
 <style scoped lang="scss">
-@import '@/styles/mixin';
+@import "@/styles/mixin";
 #aside-warp {
   display: flex;
   flex-direction: column;

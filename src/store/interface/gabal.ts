@@ -1,8 +1,8 @@
 export interface LayoutState {
-  showLogo: string;           // showLogo 是一个字符串
-  showTabs: string;           // showTabs 是一个字符串
-  sidebarList: Array<any>;    // sidebarList 是一个数组，具体类型根据你的需求调整
-  sidebarOpened: boolean;      // sidebarOpened 是一个布尔值
+  showLogo: string; // showLogo 是一个字符串
+  showTabs: string; // showTabs 是一个字符串
+  sidebarList: Array<any>; // sidebarList 是一个数组，具体类型根据你的需求调整
+  sidebarOpened: boolean; // sidebarOpened 是一个布尔值
 }
 
 /* Menu */

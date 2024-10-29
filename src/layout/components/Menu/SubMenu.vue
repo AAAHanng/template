@@ -19,14 +19,14 @@
 
 <script setup lang="ts">
 // 定义 props
-import MenuItem from '@/layout/components/Menu/MenuItem.vue';
+import MenuItem from "@/layout/components/Menu/MenuItem.vue";
 
 defineProps({
   route: {
     type: Object,
     required: true
   }
-})
+});
 </script>
 
 <style scoped></style>

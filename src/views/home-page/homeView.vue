@@ -1,12 +1,6 @@
 <template>
-  <div class="app-container">
-   cemo
-  </div>
+  <div class="app-container">cemo</div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-<style scoped lang="scss">
-
-</style>
+<script setup lang="ts"></script>
+<style scoped lang="scss"></style>

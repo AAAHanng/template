@@ -6,7 +6,7 @@
  * @LastEditTime: 2024/10/29 下午3:42
 -->
 <template>
-  <router-view v-slot="{ Component }" >
+  <router-view v-slot="{ Component }">
     <Transition name="slide-fade">
       <component :is="Component" />
     </Transition>

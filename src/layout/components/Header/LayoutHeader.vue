@@ -14,7 +14,7 @@
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
           <el-avatar shape="square" size="default"></el-avatar>
-          <SvgIcon name="yonghu" width="30px" height="30px"/>
+          <SvgIcon name="yonghu" width="30px" height="30px" />
         </div>
         <template #dropdown>
           <el-dropdown-menu class="user-dropdown">
@@ -34,9 +34,8 @@
 </template>
 
 <script setup>
-import Hamburger from './hamburger.vue'
-import breadcrumb from './Breadcrumb/breadcrumb.vue'
-
+import Hamburger from "./hamburger.vue";
+import breadcrumb from "./Breadcrumb/breadcrumb.vue";
 </script>
 
 <style lang="scss" scoped>

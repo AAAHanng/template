@@ -1,18 +1,18 @@
-import { defineStore } from 'pinia'
-import variables from '@/styles/variables.module.scss'
+import { defineStore } from "pinia";
+import variables from "@/styles/variables.module.scss";
 import type { LayoutState } from "@/store/interface/gabal.ts";
 
-export const useLayoutStore = defineStore('layout', {
-  state: ():LayoutState => ({
-    showLogo: '',
-    showTabs: '',
+export const useLayoutStore = defineStore("layout", {
+  state: (): LayoutState => ({
+    showLogo: "",
+    showTabs: "",
     sidebarList: [],
     sidebarOpened: false
   }),
 
   actions: {
     triggerSidebarOpened() {
-      this.sidebarOpened = !this.sidebarOpened
+      this.sidebarOpened = !this.sidebarOpened;
     }
   },
 
@@ -20,4 +20,4 @@ export const useLayoutStore = defineStore('layout', {
     isSidebarOpened: state => state.sidebarOpened,
     cssVar: () => variables
   }
-})
+});

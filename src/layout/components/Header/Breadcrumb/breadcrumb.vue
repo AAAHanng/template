@@ -17,31 +17,31 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { ref, watch } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
-const breadcrumbData = ref([]) // 存放计算出的面包屑数据
-const route = useRoute()
-const router = useRouter()
+const breadcrumbData = ref([]); // 存放计算出的面包屑数据
+const route = useRoute();
+const router = useRouter();
 
 const getBreadcrumbData = () => {
-  breadcrumbData.value = route.matched.filter(r => r.meta && r.meta.title)
-}
+  breadcrumbData.value = route.matched.filter(r => r.meta && r.meta.title);
+};
 
 watch(
   route,
   () => {
-    getBreadcrumbData()
+    getBreadcrumbData();
   },
   {
     immediate: true
   }
-)
+);
 
 // 跳转路由
 const onLinkClick = item => {
-  router.push(item.path)
-}
+  router.push(item.path);
+};
 </script>
 
 <style lang="scss" scoped>

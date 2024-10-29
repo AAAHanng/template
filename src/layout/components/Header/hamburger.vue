@@ -14,14 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useLayoutStore } from '@/store/modules/layout.ts'
+import { computed } from "vue";
+import { useLayoutStore } from "@/store/modules/layout.ts";
 
-const store = useLayoutStore()
+const store = useLayoutStore();
 const toggleClick = () => {
-  store.triggerSidebarOpened()
-}
-const icon = computed(() => (store.sidebarOpened ? 'a-cebianlanfenleizhedie' : 'a-fenleizhediecebianlan'))
+  store.triggerSidebarOpened();
+};
+const icon = computed(() => (store.sidebarOpened ? "a-cebianlanfenleizhedie" : "a-fenleizhediecebianlan"));
 </script>
 
 <style lang="scss" scoped>
